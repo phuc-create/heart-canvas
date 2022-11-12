@@ -1,0 +1,273 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
+    scale: 0;
+    opacity: 0;
+    animation: init 3s ease forwards;
+}
+
+.heart-1,
+.lo1 {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.heart-1 {
+    animation: beat1 2s ease-in-out forwards infinite;
+}
+
+.lo1 {
+    scale: 1.1;
+    opacity: .5;
+    animation: heartBeat 1.5s ease-out infinite;
+}
+
+.heartl1,
+.heartr1,
+.heartl1-layout,
+.heartr1-layout {
+    width: 210px;
+    height: 100%;
+    border: 3px solid #fc5c65;
+    background-color: #fc5c65;
+}
+
+.heartl1,
+.heartl1-layout {
+    border-radius: 100px 90px 0 0;
+    transform: rotate(-45deg) translate(43px);
+}
+
+.heartr1,
+.heartr1-layout {
+    border-radius: 90px 100px 0 0;
+    transform: rotate(45deg) translate(-43px);
+}
+
+/* // heart 2 */
+.heart-2,
+.lo2 {
+    width: 380px;
+    height: 380px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0;
+
+}
+
+.heart-2 {
+    animation: beat1 2s 0.5s ease-in-out forwards infinite;
+}
+
+.lo2 {
+    scale: 1.1;
+    opacity: .3;
+    animation: heartBeat 1.5s 0.5s ease-out infinite;
+}
+
+.heartl2,
+.heartr2,
+.heartl2-layout,
+.heartr2-layout {
+    width: 190px;
+    height: 100%;
+    border: 3px solid #e74c3c;
+    background-color: #e74c3c;
+}
+
+.heartl2,
+.heartl2-layout {
+    border-radius: 100px 90px 0 0;
+    transform: rotate(-45deg) translate(40px);
+}
+
+.heartr2,
+.heartr2-layout {
+    border-radius: 90px 100px 0 0;
+    transform: rotate(45deg) translate(-40px);
+}
+
+
+
+
+
+/* // heart 3 */
+
+.heart-3,
+.lo3 {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0;
+}
+
+.heart-3 {
+    animation: beat1 2s 1s ease-in-out forwards infinite;
+}
+
+.lo3 {
+    scale: 1.1;
+    opacity: .3;
+    animation: heartBeat 1.5s 1s ease-out infinite;
+}
+
+.heartl3,
+.heartr3,
+.heartl3-layout,
+.heartr3-layout {
+    width: 170px;
+    height: 100%;
+    border: 3px solid #ef5777;
+    background-color: #ef5777;
+}
+
+.heartl3,
+.heartl3-layout {
+    border-radius: 100px 90px 0 0;
+    transform: rotate(-45deg) translate(35px);
+}
+
+.heartr3,
+.heartr3-layout {
+    border-radius: 90px 100px 0 0;
+    transform: rotate(45deg) translate(-35px);
+}
+
+/* // heart 4 */
+
+.heart-4,
+.lo4 {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    scale: 0;
+}
+
+.heart-4 {
+    animation: beat1 1.5s 1s ease-in-out forwards infinite;
+}
+
+.lo4 {
+    scale: 1.1;
+    opacity: .3;
+    animation: heartBeat 1.5s 1s ease-out infinite;
+}
+
+.heartl4,
+.heartr4,
+.heartl4-layout,
+.heartr4-layout {
+    width: 110px;
+    height: 100%;
+    border: 3px solid #EA2027;
+    background-color: #EA2027;
+}
+
+.heartl4,
+.heartl4-layout {
+    border-radius: 100px 90px 0 0;
+    transform: rotate(-45deg) translate(22px);
+}
+
+.heartr4,
+.heartr4-layout {
+    border-radius: 90px 100px 0 0;
+    transform: rotate(45deg) translate(-22px);
+}
+
+
+
+@keyframes init {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes beat1 {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        opacity: .3;
+        scale: 1;
+    }
+
+    50% {
+        opacity: .5;
+        scale: 1.1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 1;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .wrapper {
+        scale: 0.6;
+    }
+
+
+
+    @keyframes init {
+        to {
+            scale: .6;
+            opacity: 1;
+        }
+    }
+}
